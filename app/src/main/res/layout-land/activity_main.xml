@@ -12,21 +12,38 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:src="@drawable/bg_udacity_logos"
-        android:background="@color/white"
-        android:paddingTop="@dimen/padding_small"/>
+        android:scaleType="centerCrop"
+        android:background="@color/white"/>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/gradient_shape">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/Grow"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size"
+            android:padding="@dimen/padding_norm"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/learn_degree_crop"
+            android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/full_address"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="end"
             android:text="@string/fullAddress"
-            android:background="@drawable/gradient_shape"
             android:autoLink="all"
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
@@ -34,18 +51,6 @@
             android:textSize="@dimen/body_size"
             android:padding="@dimen/padding_norm"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerVertical="true"
-            android:text="@string/Grow"
-            android:fontFamily="sans-serif"
-            android:textColor="@color/white"
-            android:textSize="@dimen/title_size"
-            android:padding="@dimen/padding_norm"/>
-
-    </RelativeLayout>
-
+    </LinearLayout>
 
 </LinearLayout>
